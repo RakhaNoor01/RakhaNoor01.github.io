@@ -171,8 +171,12 @@ body {
 }
 
 .split-layout {
-  margin-left: 260px;
+  margin-left: 240px;
   transition: margin-left 0.2s;
+}
+
+.split-layout {
+  margin-left: 260px; /* sesuaikan dengan lebar sidebar */
 }
 
 .sidebar h1 {

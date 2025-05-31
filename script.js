@@ -209,104 +209,204 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const quizQuestions = [
   {
-    q: "Siapakah pendiri Nahdlatul Ulama (NU)?",
-    options: ["KH. Ahmad Dahlan", "KH. Hasyim Asy’ari", "Buya Hamka", "KH. Abdurrahman Wahid"],
+    q: "Siapakah tokoh yang pernah menjadi Ketua Umum PBNU dan juga Presiden RI ke-4?",
+    options: [
+      "KH. Hasyim Asy’ari",
+      "KH. Abdurrahman Wahid",
+      "KH. Ahmad Dahlan",
+      "KH. Mustofa Bisri"
+    ],
     answer: 1
   },
   {
-    q: "Siapakah pendiri Muhammadiyah?",
-    options: ["KH. Ahmad Dahlan", "KH. Hasyim Asy’ari", "KH. Mustofa Bisri", "KH. Quraish Shihab"],
+    q: "Apa kontribusi utama KH. Ahmad Dahlan dalam bidang pendidikan di Indonesia?",
+    options: [
+      "Mendirikan pesantren tradisional",
+      "Mendirikan sekolah modern dan Muhammadiyah",
+      "Menulis tafsir Al-Mishbah",
+      "Menjadi Imam Besar Masjid Istiqlal"
+    ],
+    answer: 1
+  },
+  {
+    q: "Kitab apa yang menjadi karya penting KH. Hasyim Asy’ari dalam bidang keilmuan pesantren?",
+    options: [
+      "Tafsir Al-Azhar",
+      "Adabul ‘Alim wal Muta’allim",
+      "Tafsir Al-Mishbah",
+      "Kitab Kuning"
+    ],
+    answer: 1
+  },
+  {
+    q: "Siapakah tokoh yang dikenal sebagai pelopor tafsir Al-Qur’an kontekstual di Indonesia?",
+    options: [
+      "KH. Quraish Shihab",
+      "Buya Hamka",
+      "KH. Mustofa Bisri",
+      "KH. Syafii Maarif"
+    ],
     answer: 0
   },
   {
-    q: "Siapakah Presiden RI ke-4 yang dikenal sebagai Gus Dur?",
-    options: ["KH. Ahmad Dahlan", "KH. Abdurrahman Wahid", "KH. Maimoen Zubair", "KH. Zainuddin MZ"],
+    q: "Apa peran utama Buya Hamka dalam perkembangan Islam di Indonesia?",
+    options: [
+      "Pendiri NU",
+      "Ketua MUI pertama dan penulis Tafsir Al-Azhar",
+      "Pendiri Muhammadiyah",
+      "Pengasuh Pesantren Tebuireng"
+    ],
     answer: 1
   },
   {
-    q: "Siapakah ulama yang dikenal sebagai Dai Sejuta Umat?",
-    options: ["KH. Zainuddin MZ", "KH. Quraish Shihab", "KH. Mustofa Bisri", "Buya Hamka"],
+    q: "Siapakah tokoh yang dikenal sebagai Gus Baha dan keahliannya?",
+    options: [
+      "KH. Ahmad Bahauddin Nursalim, ahli tafsir dan tahfidz Al-Qur’an",
+      "KH. Mustofa Bisri, budayawan",
+      "KH. Zainuddin MZ, penceramah",
+      "KH. Syafii Maarif, cendekiawan"
+    ],
     answer: 0
   },
   {
-    q: "Apa karya terkenal Buya Hamka di bidang tafsir?",
-    options: ["Tafsir Al-Mishbah", "Tafsir Al-Azhar", "Kitab Kuning", "Tafsir Jalalain"],
+    q: "Siapakah tokoh yang dikenal sebagai penggerak Islam inklusif dan pluralisme di Indonesia?",
+    options: [
+      "KH. Ahmad Dahlan",
+      "KH. Abdurrahman Wahid (Gus Dur)",
+      "KH. Maimoen Zubair",
+      "KH. Wahid Hasyim"
+    ],
     answer: 1
   },
   {
-    q: "Siapakah pengasuh Pondok Pesantren Al-Anwar Sarang?",
-    options: ["KH. Ahmad Dahlan", "KH. Maimoen Zubair", "KH. Mustofa Bisri", "KH. Wahid Hasyim"],
+    q: "Apa kontribusi utama KH. Mustofa Bisri (Gus Mus) dalam dakwah Islam di Indonesia?",
+    options: [
+      "Mendirikan Muhammadiyah",
+      "Menyebarkan Islam ramah melalui sastra dan budaya",
+      "Menjadi Imam Besar Masjid Istiqlal",
+      "Menulis Tafsir Al-Azhar"
+    ],
     answer: 1
   },
   {
-    q: "Siapakah tokoh yang dikenal sebagai Gus Baha?",
-    options: ["KH. Ahmad Bahauddin Nursalim", "KH. Mustofa Bisri", "KH. Quraish Shihab", "KH. Syafii Maarif"],
+    q: "Siapakah tokoh yang dikenal sebagai Dai Sejuta Umat?",
+    options: [
+      "KH. Zainuddin MZ",
+      "KH. Quraish Shihab",
+      "KH. Mustofa Bisri",
+      "Buya Hamka"
+    ],
     answer: 0
   },
   {
-    q: "Apa organisasi yang didirikan KH. Ahmad Dahlan?",
-    options: ["NU", "Muhammadiyah", "ICMI", "MUI"],
-    answer: 1
-  },
-  {
-    q: "Siapakah penulis Tafsir Al-Mishbah?",
-    options: ["KH. Quraish Shihab", "KH. Mustofa Bisri", "KH. Ahmad Dahlan", "Buya Hamka"],
+    q: "Apa karya sastra terkenal Buya Hamka?",
+    options: [
+      "Tenggelamnya Kapal Van Der Wijck",
+      "Laskar Pelangi",
+      "Siti Nurbaya",
+      "Ayat-Ayat Cinta"
+    ],
     answer: 0
   },
   {
     q: "Siapakah Imam Besar Masjid Istiqlal saat ini?",
-    options: ["KH. Quraish Shihab", "Prof. Dr. Nasaruddin Umar, MA", "KH. Maimoen Zubair", "KH. Wahid Hasyim"],
+    options: [
+      "KH. Quraish Shihab",
+      "Prof. Dr. Nasaruddin Umar, MA",
+      "KH. Maimoen Zubair",
+      "KH. Wahid Hasyim"
+    ],
     answer: 1
-  },
-  {
-    q: "Siapakah tokoh yang dikenal sebagai Gus Mus?",
-    options: ["KH. Mustofa Bisri", "KH. Ahmad Dahlan", "KH. Wahid Hasyim", "KH. Zainuddin MZ"],
-    answer: 0
-  },
-  {
-    q: "Apa peran utama KH. Wahid Hasyim dalam sejarah Indonesia?",
-    options: ["Pendiri Muhammadiyah", "Menteri Agama RI pertama", "Ketua MUI", "Presiden RI ke-4"],
-    answer: 1
-  },
-  {
-    q: "Siapakah tokoh yang dikenal sebagai cendekiawan muslim dan mantan Ketua Umum PP Muhammadiyah?",
-    options: ["KH. Quraish Shihab", "KH. Syafii Maarif", "KH. Ahmad Dahlan", "KH. Mustofa Bisri"],
-    answer: 1
-  },
-  {
-    q: "Apa karya sastra terkenal Buya Hamka?",
-    options: ["Tenggelamnya Kapal Van Der Wijck", "Laskar Pelangi", "Siti Nurbaya", "Ayat-Ayat Cinta"],
-    answer: 0
-  },
-  {
-    q: "Siapakah tokoh yang aktif dalam dialog antaragama dan penguatan peran masjid di Indonesia?",
-    options: ["KH. Quraish Shihab", "KH. Ahmad Dahlan", "Prof. Dr. Nasaruddin Umar, MA", "KH. Mustofa Bisri"],
-    answer: 2
   },
   {
     q: "Apa nama organisasi intelektual muslim yang berdiri tahun 1990-an?",
-    options: ["ICMI", "NU", "Muhammadiyah", "MUI"],
-    answer: 0
-  },
-  {
-    q: "Siapakah tokoh yang dikenal sebagai penggerak Islam moderat dan pluralisme?",
-    options: ["KH. Abdurrahman Wahid", "KH. Ahmad Dahlan", "KH. Mustofa Bisri", "KH. Quraish Shihab"],
-    answer: 0
-  },
-  {
-    q: "Siapakah tokoh yang dikenal sebagai pengasuh Pesantren Tebuireng dan aktivis HAM?",
-    options: ["KH. Salahuddin Wahid (Gus Sholah)", "KH. Ahmad Dahlan", "KH. Mustofa Bisri", "KH. Wahid Hasyim"],
+    options: [
+      "ICMI",
+      "NU",
+      "Muhammadiyah",
+      "MUI"
+    ],
     answer: 0
   },
   {
     q: "Siapakah tokoh perempuan yang dikenal sebagai ulama dan aktivis perempuan Indonesia?",
-    options: ["Nyai Hj. Badriyah Fayumi", "KH. Mustofa Bisri", "KH. Ahmad Dahlan", "KH. Quraish Shihab"],
+    options: [
+      "Nyai Hj. Badriyah Fayumi",
+      "KH. Mustofa Bisri",
+      "KH. Ahmad Dahlan",
+      "KH. Quraish Shihab"
+    ],
     answer: 0
   },
   {
-    q: "Apa peran utama KH. Hasyim Asy’ari dalam sejarah Islam Indonesia?",
-    options: ["Pendiri NU", "Pendiri Muhammadiyah", "Ketua MUI", "Imam Besar Masjid Istiqlal"],
+    q: "Apa peran utama KH. Wahid Hasyim dalam sejarah Indonesia?",
+    options: [
+      "Pendiri Muhammadiyah",
+      "Menteri Agama RI pertama",
+      "Ketua MUI",
+      "Presiden RI ke-4"
+    ],
+    answer: 1
+  },
+  {
+    q: "Siapakah tokoh yang dikenal sebagai pengasuh Pesantren Tebuireng dan aktivis HAM?",
+    options: [
+      "KH. Salahuddin Wahid (Gus Sholah)",
+      "KH. Ahmad Dahlan",
+      "KH. Mustofa Bisri",
+      "KH. Wahid Hasyim"
+    ],
     answer: 0
+  },
+  {
+    q: "Siapakah penulis Tafsir Al-Mishbah?",
+    options: [
+      "KH. Quraish Shihab",
+      "KH. Mustofa Bisri",
+      "KH. Ahmad Dahlan",
+      "Buya Hamka"
+    ],
+    answer: 0
+  },
+  {
+    q: "Siapakah tokoh yang dikenal sebagai Gus Mus?",
+    options: [
+      "KH. Mustofa Bisri",
+      "KH. Ahmad Dahlan",
+      "KH. Wahid Hasyim",
+      "KH. Zainuddin MZ"
+    ],
+    answer: 0
+  },
+  {
+    q: "Apa organisasi yang didirikan KH. Ahmad Dahlan?",
+    options: [
+      "NU",
+      "Muhammadiyah",
+      "ICMI",
+      "MUI"
+    ],
+    answer: 1
+  },
+  {
+    q: "Apa peran utama KH. Hasyim Asy’ari dalam sejarah Islam Indonesia?",
+    options: [
+      "Pendiri NU",
+      "Pendiri Muhammadiyah",
+      "Ketua MUI",
+      "Imam Besar Masjid Istiqlal"
+    ],
+    answer: 0
+  },
+  {
+    q: "Siapakah tokoh yang dikenal sebagai cendekiawan muslim dan mantan Ketua Umum PP Muhammadiyah?",
+    options: [
+      "KH. Quraish Shihab",
+      "KH. Syafii Maarif",
+      "KH. Ahmad Dahlan",
+      "KH. Mustofa Bisri"
+    ],
+    answer: 1
   }
 ];
 
