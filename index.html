@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tokoh Islam</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌓</button>
+  </div>
+  <button id="sidebar-toggle" aria-label="Buka Menu" style="position:fixed;top:18px;left:18px;z-index:200;display:none;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:0.6rem 0.9rem;font-size:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,0.13);cursor:pointer;">
+    ☰
+  </button>
+
+  <main class="split-layout">
+    <aside class="sidebar" id="sidebar">
+      <h1>Islam Nusantara</h1>
+      <nav>
+        <ul>
+          <li><a href="#tentang-section">Tentang</a></li>
+          <li><a href="#timeline-section">Timeline</a></li>
+          <li><a href="#dalil-section">Dalil dari Tokoh</a></li>
+          <li><a href="#tokoh-section">Tokoh</a></li>
+          <li><a href="#quiz-app">Quiz</a></li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <section class="dashboard" id="dashboard">
+      <h2 class="section-title">Tokoh Islam Pasca-Kemerdekaan</h2>
+      <div class="dashboard-grid">
+  
+        <div class="card-dashboard" id="tentang-section">
+          <img src="Assets/dashboards/tentang.png" alt="Foto Tentang" class="card-dashboard-img">
+          <div class="card-dashboard-content">
+            <h3>📖 Tentang</h3>
+            <p>
+              Setelah kemerdekaan Indonesia, tokoh-tokoh Islam Nusantara berperan besar dalam membangun bangsa. Mereka aktif di bidang pendidikan, sosial, dan politik, serta menjaga persatuan di tengah masyarakat yang beragam.
+            </p>
+            <p>
+              Nilai-nilai Islam yang moderat dan toleran terus dikembangkan, sehingga Islam di Indonesia tumbuh sebagai kekuatan yang mendorong kemajuan dan harmoni bangsa.
+            </p>
+          </div>
+        </div>
+        
+        <div class="card-dashboard" id="timeline-section">
+          <div class="card-dashboard-content">
+            <h3>🕰️ Timeline Sejarah</h3>
+            <div class="timeline-container">
+              <div class="timeline-line"></div>
+        
+              <div class="timeline-point">
+                <div class="timeline-era">1945</div>
+                <div class="timeline-desc">Proklamasi Kemerdekaan Indonesia. Tokoh-tokoh Islam ikut merumuskan dasar negara dan menjaga persatuan bangsa.</div>
+              </div>
+        
+              <div class="timeline-point">
+                <div class="timeline-era">1952–1970an</div>
+                <div class="timeline-desc">Peran aktif ormas Islam seperti NU dan Muhammadiyah dalam pembangunan pendidikan, sosial, dan politik nasional.</div>
+              </div>
+        
+              <div class="timeline-point">
+                <div class="timeline-era">1980–1998</div>
+                <div class="timeline-desc">Kebangkitan intelektual muslim, berdirinya ICMI, dan peran tokoh Islam dalam reformasi sosial serta politik.</div>
+              </div>
+        
+              <div class="timeline-point">
+                <div class="timeline-era">1998–2004</div>
+                <div class="timeline-desc">Era Reformasi: Tokoh Islam seperti Gus Dur menjadi Presiden RI, penguatan demokrasi dan pluralisme.</div>
+              </div>
+        
+              <div class="timeline-point">
+                <div class="timeline-era">2004–Sekarang</div>
+                <div class="timeline-desc">Tokoh Islam berperan dalam penguatan moderasi beragama, dialog antarumat, dan pembangunan bangsa di era global.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-dashboard" id="dalil-section">
+          <div class="card-dashboard-content">
+            <h3>📜 Dalil Harian</h3>
+            <div id="dalil-list"></div>
+            <div style="text-align: center;">
+              <button id="generate-dalil-btn" class="btn-link">Tampilkan Dalil</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-dashboard" id="tokoh-section">
+          <div class="card-dashboard-content">
+            <h3>🔍 Mengenal Tokoh</h3>
+            <div id="tokoh-cards"></div>
+            <div id="tokoh-modal">
+              <div class="modal-content">
+                <button id="close-tokoh-modal">&times;</button>
+                <h4 id="modal-nama"></h4>
+                <div style="text-align:left;">
+                  <b>Biografi:</b>
+                  <div id="modal-bio" style="margin-bottom:1rem;"></div>
+                  <b>Wilayah Dakwah:</b>
+                  <div id="modal-wilayah" style="margin-bottom:1rem;"></div>
+                  <b>Hasil Karya:</b>
+                  <div id="modal-karya" style="margin-bottom:1rem;"></div>
+                  <b>Peran:</b>
+                  <div id="modal-peran"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-dashboard-content" id="quiz-app">
+          <div id="quiz-question"></div>
+          <div id="quiz-options"></div>
+          <div id="quiz-progress" style="margin:1rem 0;"></div>
+          <div id="quiz-score" style="margin-bottom:1rem;"></div>
+          <button id="quiz-next" style="display:none;"></button>
+          <button id="quiz-restart" style="display:none;">Main Lagi</button>
+        </div>
+  
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

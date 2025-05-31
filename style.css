@@ -1,0 +1,451 @@
+:root {
+  --bg-main: #0c0c12;
+  --card-bg: #1a1a24;
+  --text: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --accent: #6ec1e4;
+  --border: #2e2e38;
+}
+
+body.light {
+  --bg-main: #fdfdfd;
+  --card-bg: #ffffff;
+  --text: #111;
+  --text-secondary: #444;
+  --accent: #0077cc;
+  --border: #ddd;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-toggle button {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#sidebar-toggle {
+  display: none;
+}
+@media (max-width: 900px) {
+  #sidebar-toggle {
+    display: block;
+  }
+  .sidebar {
+    transition: left 0.3s, box-shadow 0.3s;
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    width: 80vw;
+    max-width: 320px;
+    height: 100vh;
+    background: linear-gradient(135deg, #181820 80%, #23233a 100%);
+    z-index: 300;
+    box-shadow: 2px 0 24px 0 rgba(0,0,0,0.18);
+    border-right: 1px solid var(--border, #222);
+    padding-top: 3.5rem;
+  }
+  .sidebar.open {
+    left: 0;
+    box-shadow: 2px 0 24px 0 rgba(0,0,0,0.18);
+  }
+  /* Overlay untuk menutup sidebar */
+  #sidebar-overlay {
+    display: none;
+    position: fixed;
+    z-index: 250;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.25);
+  }
+  #sidebar-overlay.active {
+    display: block;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background: linear-gradient(135deg, #181820 80%, #23233a 100%);
+  z-index: 100;
+  border-right: 1px solid var(--border, #222);
+  padding: 2.5rem 1.2rem 1.5rem 1.2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  box-shadow: 2px 0 16px 0 rgba(0,0,0,0.08);
+}
+
+.sidebar h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  text-align: left;
+  width: 100%;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar nav li {
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: background 0.18s, color 0.18s;
+  width: 100%;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus {
+  background: var(--accent);
+  color: #fff;
+  outline: none;
+}
+
+.split-layout {
+  margin-left: 240px;
+  transition: margin-left 0.2s;
+}
+
+.split-layout {
+  margin-left: 260px; /* sesuaikan dengan lebar sidebar */
+}
+
+.sidebar h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 1rem;
+}
+
+.sidebar nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar nav a:hover {
+  color: var(--accent);
+}
+
+.dashboard {
+  flex: 1;
+  padding: 4rem 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Cinzel', serif;
+  color: var(--accent);
+  text-align: center;
+  width: 100%;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-dashboard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card-dashboard-content {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-dashboard-img {
+  width: 270px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.card-dashboard-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-dashboard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.card-dashboard p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+#timeline-section {
+  color: #fff;
+  padding: 30px;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 73px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: white;
+  z-index: 1;
+}
+
+.timeline-point {
+  position: relative;
+  text-align: center;
+  width: 22%;
+  z-index: 2;
+}
+
+.timeline-era {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.timeline-point {
+  position: relative;
+  text-align: center;
+  width: 22%;
+}
+
+.timeline-desc {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.btn-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+#dalil-section .card-dashboard-content {
+    text-align: center;
+    place-items: center;
+    margin: auto;
+
+}
+
+#dalil-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text-secondary);
+  min-height: 60px; /* penting! */
+  width: 100%;
+}
+
+
+#generate-dalil-btn {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#generate-dalil-btn:hover:enabled {
+  background: #3ba6d3;
+}
+
+#tokoh-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.tokoh-card {
+  background: var(--card-bg, #fff);
+  color: var(--text, #111);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  min-width: 180px;
+  max-width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.tokoh-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.tokoh-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  background: none;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tokoh-modal-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background: none;
+  border: none;
+}
+
+#tokoh-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#tokoh-modal .modal-content {
+  background: var(--card-bg, #fff);
+  color: var(--text, #111);
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90vw;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+#close-tokoh-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent, #0077cc);
+}
+
+.quiz-opt {
+  margin: 8px 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--card-bg);
+  color: var(--text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+#quiz-next {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+
+.quiz-opt:hover:enabled {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-link:hover {
+  border-color: var(--accent);
+}
