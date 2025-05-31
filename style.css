@@ -42,38 +42,71 @@ body {
 #sidebar-toggle {
   display: none;
 }
-@media (max-width: 900px) {
-  #sidebar-toggle {
-    display: block;
+
+@media (max-width: 600px) {
+  .split-layout {
+    flex-direction: column;
+    margin-left: 0 !important;
   }
+
   .sidebar {
-    transition: left 0.3s, box-shadow 0.3s;
-    position: fixed;
-    left: -100vw;
-    top: 0;
-    width: 80vw;
-    max-width: 320px;
-    height: 100vh;
-    background: linear-gradient(135deg, #181820 80%, #23233a 100%);
-    z-index: 300;
-    box-shadow: 2px 0 24px 0 rgba(0,0,0,0.18);
-    border-right: 1px solid var(--border, #222);
-    padding-top: 3.5rem;
-  }
-  .sidebar.open {
+    transition: left 0.3s;
     left: 0;
-    box-shadow: 2px 0 24px 0 rgba(0,0,0,0.18);
+    z-index: 300;
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    align-items: center;
+    box-shadow: none;
+    border-right: none;
+    gap: 1rem;
   }
-  /* Overlay untuk menutup sidebar */
-  #sidebar-overlay {
-    display: none;
+
+  .sidebar.hide {
+    left: -100vw;
     position: fixed;
-    z-index: 250;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.25);
   }
-  #sidebar-overlay.active {
+
+  .sidebar h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .dashboard {
+    padding: 1rem 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-grid {
     display: block;
+    gap: 0;
+  }
+
+  .card-dashboard {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0.5rem;
+    gap: 0.7rem;
+  }
+
+  .card-dashboard-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #sidebar-toggle {
+    display: block !important;
+    z-index: 400;
   }
 }
 
@@ -138,12 +171,8 @@ body {
 }
 
 .split-layout {
-  margin-left: 240px;
+  margin-left: 260px;
   transition: margin-left 0.2s;
-}
-
-.split-layout {
-  margin-left: 260px; /* sesuaikan dengan lebar sidebar */
 }
 
 .sidebar h1 {

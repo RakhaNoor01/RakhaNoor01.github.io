@@ -417,3 +417,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth > 900) closeSidebar();
   });
 });
+
+const sidebar = document.getElementById('sidebar');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+
+  function toggleSidebar() {
+    sidebar.classList.toggle('hide');
+  }
+
+  sidebarToggle.addEventListener('click', toggleSidebar);
+
+  document.addEventListener('click', function(e) {
+    if (
+      window.innerWidth <= 600 &&
+      !sidebar.contains(e.target) &&
+      !sidebarToggle.contains(e.target)
+    ) {
+      sidebar.classList.add('hide');
+    }
+  });
